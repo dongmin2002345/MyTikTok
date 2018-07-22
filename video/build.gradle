@@ -1,0 +1,5 @@
+apply from: rootProject.file('library.gradle')
+
+dependencies {
+    implementation deps.rxjava2.rxjava
+}

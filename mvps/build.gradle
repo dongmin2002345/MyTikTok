@@ -1,0 +1,10 @@
+apply from: rootProject.file('library.gradle')
+
+dependencies {
+    implementation deps.rxjava2.rxjava
+    implementation deps.rxjava2.rxandroid
+    implementation deps.rxlifecycle2.android
+    implementation deps.rxlifecycle2.components
+    implementation deps.guava_android
+    implementation deps.butterknife
+}
