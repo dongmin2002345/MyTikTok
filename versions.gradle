@@ -19,6 +19,7 @@ versions.rxlifecycle2 = "2.1.0"
 versions.android_arch_lifecycle_ext = "1.1.1"
 
 versions.greendao = "3.2.2"
+versions.javapoet = "1.9.0"
 
 versions.fresco = "1.3.0"
 versions.animated_gif = "1.3.0"

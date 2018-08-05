@@ -7,4 +7,5 @@ dependencies {
     implementation deps.rxlifecycle2.components
     implementation deps.guava_android
     implementation deps.butterknife
+    compileOnly project(':annotation')
 }

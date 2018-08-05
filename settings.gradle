@@ -1,1 +1,1 @@
-include ':app', ':mvps', ':logutil', ':router', ':push', ':http', ':video', ':annotation', ':camera', ':widget'
+include ':app', ':mvps', ':logutil', ':router', ':push', ':http', ':video', ':camera', ':widget', ':annotation', ':annotation-processing'

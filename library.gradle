@@ -14,6 +14,7 @@ android {
 
 dependencies {
     api deps.support.annotations
+
     api fileTree(dir: "libs", include: '*.jar')
 
 }
