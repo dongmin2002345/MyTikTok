@@ -29,5 +29,6 @@ android {
 dependencies {
     implementation deps.support.app_compat
     implementation project(path: ':annotation')
+    implementation project(path: ':mvps')
     annotationProcessor project(":annotation-processing")
 }

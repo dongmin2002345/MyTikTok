@@ -4,6 +4,7 @@ import com.example.annotation.inject.Inject;
 import com.example.annotation.inject.Reference;
 import com.example.annotation_processing.util.BaseProcessor;
 import com.example.annotation_processing.util.SortedElement;
+import com.google.auto.service.AutoService;
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.TypeName;
 
@@ -12,6 +13,7 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.processing.ProcessingEnvironment;
+import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.annotation.processing.SupportedAnnotationTypes;
 import javax.annotation.processing.SupportedOptions;
@@ -25,7 +27,7 @@ import javax.lang.model.type.TypeMirror;
 
 import static com.example.annotation_processing.inject.InjectorProcessor.CLASS_NAME;
 
-
+@AutoService(Processor.class)
 @SupportedAnnotationTypes({"com.example.annotation.inject.Inject"})
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 @SupportedOptions(CLASS_NAME)

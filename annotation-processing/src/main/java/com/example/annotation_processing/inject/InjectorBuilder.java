@@ -39,7 +39,7 @@ public class InjectorBuilder extends ClassBuilder {
         ParameterizedTypeName.get(ClassName.get(Set.class), TypeName.get(Class.class));
     mType = TypeSpec.classBuilder(mClassName)
         .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
-        .addAnnotation(generated)
+//        .addAnnotation(generated)
         .addField(fieldNamesType, sFieldInjectNames, Modifier.PRIVATE, Modifier.FINAL)
         .addField(fieldTypesType, sFieldInjectTypes, Modifier.PRIVATE, Modifier.FINAL)
         .addSuperinterface(ParameterizedTypeName.get(ClassName.get(Injector.class),

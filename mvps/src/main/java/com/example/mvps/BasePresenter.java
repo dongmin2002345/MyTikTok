@@ -28,7 +28,7 @@ public class BasePresenter implements Presenter {
   
   
   @Override
-  public void initView(View view) {
+  public void init(View view) {
     if (isInitialized()) {
       
       throw new IllegalStateException("Presenter只能被初始化一次!");
@@ -39,7 +39,7 @@ public class BasePresenter implements Presenter {
       
       ButterKnife.bind(this, view);
     
-      onInitView();
+      onInit();
     
       initChildren();
     } catch (Exception e) {
@@ -49,13 +49,13 @@ public class BasePresenter implements Presenter {
     isInitialized = true;
   }
   
-  protected void onInitView() {
+  protected void onInit() {
   
   }
   
   private void initChildren() {
     for (Presenter childPresenter: mChildPresenterList) {
-      childPresenter.initView(mRootView);
+      childPresenter.init(mRootView);
     }
   }
   
@@ -146,7 +146,7 @@ public class BasePresenter implements Presenter {
     mChildPresenterList.add(presenter);
     
     if (isInitialized()) {
-      presenter.initView(mRootView);
+      presenter.init(mRootView);
     }
     return this;
   }

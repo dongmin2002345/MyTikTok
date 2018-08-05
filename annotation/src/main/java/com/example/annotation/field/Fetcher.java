@@ -14,7 +14,6 @@ public interface Fetcher<I> {
   <T> void set(I target, Class<T> tClass, T value);
 
   default <T> void set(I target, T value) {
-    // 必须强转一下，否则编译不过
     if (value == null) {
       return;
     }

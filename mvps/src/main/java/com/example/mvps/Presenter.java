@@ -10,15 +10,16 @@ import android.view.View;
  */
 
 public interface Presenter {
-  void initView(View view);
+  void init(View view);
   
   void bind(Object... callerContext);
   
   void destroy();
   
+  Presenter add(Presenter presenter);
+  
   boolean isInitialized();
   
   Activity getActivity();
   
-  Presenter add(Presenter presenter);
 }

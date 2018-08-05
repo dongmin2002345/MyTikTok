@@ -19,8 +19,8 @@ public class InjectorHelperBuilder extends ClassBuilder {
     mPackage = pkg;
     mClassName = className;
     mType = TypeSpec.classBuilder(className)
-        .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
-        .addAnnotation(generated);
+        .addModifiers(Modifier.PUBLIC, Modifier.FINAL);
+//        .addAnnotation(generated);
     AnnotationSpec invokeBy = AptUtils.invokeBy(ClassName.get(Injectors.class),
         CodeBlock.of("$T.INVOKER_ID", Injectors.class));
     mInit =
